@@ -1,0 +1,75 @@
+** NextJS **
+# NextJS soluciona problemas comunes de React. Se define como React framework.
+# Beneficios:
+# Server-side rendering (cargar la página en el servidor "mejora SEO y rendimiento"), pre-rendering automaticamente en las páginas.
+# Definimos las páginas y rutas con archivos y páginas.
+
+** Crear e iniciar proyecto **
+# npx create-next-app _NombreDelProyecto_
+# La carpeta pages es la carpeta más importante en next.js
+
+** Rutas **
+# En vez de usar route como react. Usamos las rutas creadas en la carpeta /pages. 
+# El archivo llamado [id].js -> es una ruta dinámica.
+# [...slug].js -> coger más de un valor.
+
+** <a> NextJS **
+# Usamos link en vez de <a></a>
+
+** Pre-Rendering & Data Fetching **
+# Estas acciones solucionan el problema con React donde los datos son cargados con JS en el cliente y no son visibles a través del código fuente. Y esto es negativo para el SEO.
+# Pre-rendered es bueno para el SEO.
+# Tenemos dos tipos (Static Generation y Server-side Rendering):
+# Static side generation (SSG "getStaticProps") -> Pre-generar una página (con datos preparados en el lado del servidor) durante el tiempo de construcción. De esta manera pueden ser cached por el servidor. Utilizamos la función (getStaticProps) que se ejecuta en el proceso de build de la página. Si trabajamos con una página dinámica tenemos que implementar antes la función getStaticPaths. getStaticPaths permite saber que posibles rutas tendremos.
+# Server-side Rendering (SSR getServerSideProps) -> A diferencia del getStaticProps este no se ejecuta en el proceso build sino que se ejecuta siempre en el servidor después de cargar la página (cada vez que hacemos refresh en la página). Adecuado para páginas que actualizan la información muy a menudo, sino usar getStaticProps.
+# La opción revalidate indica que volvera a cargar la información X segundos cada vez que haya un cambio en los datos json.
+
+** Head **
+# Permite insertar elementos en el header
+
+** Image **
+# https://uploadcare.com/blog/next-js-image-optimization/
+
+** Build **
+# npm run build -> para producción. Crea un archivo .next con todo el proyecto.
+
+** Module aliases **
+# Nos permite substituir por ejemplo ../.. por un @
+
+** Debug Next.js **
+# https://www.peteranderson.me/articles/debugging-next-js-apps-in-visual-studio-code
+# https://medium.com/@LeVanThong/how-to-debug-next-js-on-vscode-and-chrome-e82086119b83
+
+** Finalizar proyecto **
+# Creamos un archivo para indicar donde exportar nuestra app de next.js. Para desplegar en vercel no tenemos que hacer nada.
+# next build pensado para páginas dinámicas en cambio next export es indicado para páginas estáticas (no es compatible con getServerSideProps, todas las API's no funcionan y el tag Image no es funcional).
+# next build -> produce un producto optimizado con server-side app: (Requiere NodeJS server). Genera una carpeta .next .
+# next export -> Produce una app 100% static (HTML, CSS, JS). No es necesario NodeJS server.
+# next start -> Probar la producción.
+
+** SSR vs CSR **
+# https://www.growth-rocket.com/blog/a-closer-look-at-client-side-server-side-rendering/
+# https://platzi.com/discusiones/1199-react/28115-server-side-renderssr-vs-client-render/
+
+** Proyecto 1 DJ - Traversy **
+# npx create-strapi-app _NombreDelProyecto_ -> Instalar strapi en nuestro proyecto
+# npm run develop -> para iniciar el proyecto de strapi
+# Usuario: sergi@sergi.com Password: Sergi123456
+# Cloudinary: Usuario: sergi E-mail: phxhollow16@hotmail.com Password: S_ergi123456
+# npm i strapi-provider-upload-cloudinary -> Dentro del proyecto de strapi. Sirve para trabajar con Cloudinary
+# npm i qs -> en el proyecto frontend. Para obtener mejores resultados con el buscador.
+# npm i react-toastify -> En el proyecto frontEnd para trabajar con toast.
+# npm i slugify -> En el proyecto Backend para que cree el slug.
+# npm i moment -> En el proyecto frontEnd para trabajar con el tiempo y fechas.
+# npm i cookie -> En el proyecto frontEnd para trabajar con cookies.
+# npm i react-map-gl react-geocode -> En el proyecto frontEnd para trabajar con mapbox i obtener coordenadas.
+
+** Proyecto 2 Blog - Traversy **
+# npx create-next-app _NombreDelProyecto_ -> Crear el proyecto next.js
+# npm install -D tailwindcss@latest postcss@latest autoprefixer@latest -> Instalar tailwind en next.js
+# npx tailwindcss init -p -> Iniciar tailwind en next.js
+# npm install --save gray-matter -> Obtener header de los md.
+# npm i marked -> Para transformar los datos de markdown en texto normal.
+*** Mejoras ***
+# npm i react-markdown -> Mejores resultados con la transformación del markdown a HTML.
+# npm install react-syntax-highlighter -> Para resaltar el código fuente.

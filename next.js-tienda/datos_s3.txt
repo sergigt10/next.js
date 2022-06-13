@@ -1,0 +1,12 @@
+Nombre bucket: game-ecommerce-udemy-aws-nextjs
+
+Politcia creada: S3BucketAccesEcommerce
+
+Usuario S3:
+Name: strapi-game-ecommerce 
+ID de clave de acceso: AKIAWTJYQ4SBH7PCZ7FA
+Clave de acceso secreta: 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
+
+Strapi:
+Name: duna@duna.com
+Password: Sergi123456

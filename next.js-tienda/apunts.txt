@@ -1,0 +1,14 @@
+** E-commerce **
+# npx create-next-app ecommerce
+# npm i node-sass -> instalar sass
+# npm install semantic-ui-react semantic-ui-css -> instalar semantic ui
+# npx create-strapi-app NombreProyecto -> instalar strapi en la raiz del proyecto
+# npm run develop -> iniciar strapi
+# npm install strapi-provider-upload-aws-s3 -> en el proyecto de strapi conectamos S3.
+# npm i formik -> En el proyecto del cliente. Para manejar el formulario.
+# npm i yup -> En el proyecto del cliente. Para validar el formulario.
+# npm i react-toastify -> En el proyecto del cliente. notificaciónes toast.
+# npm i jwt-decode -> En el proyecto del cliente. Obtenemos los valores que lleva JWT (decodificar).
+# npm i classnames -> En el proyecto del cliente. Pasamos clases (css) a los componentes y poder añadir condicionales css.
+# npm i query-string -> En el proyecto del cliente. Para transformar un string en query y una query en string.
+# Dentro de package.json en el apartado scripts añadimos next export. En el terminal hacemos primer npm i build y después npm i export
